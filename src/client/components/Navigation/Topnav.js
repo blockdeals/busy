@@ -20,6 +20,10 @@ import Avatar from '../Avatar';
 import PopoverMenu, { PopoverMenuItem } from '../PopoverMenu/PopoverMenu';
 import Notifications from './Notifications/Notifications';
 import './Topnav.less';
+import logo from './blockdeals_logo.svg';
+
+
+
 
 @injectIntl
 @withRouter
@@ -336,12 +340,14 @@ class Topnav extends React.Component {
     return (
       <div className="Topnav">
         <div className="topnav-layout">
-          <div className={classNames('left', { 'Topnav__mobile-hidden': searchBarActive })}>
+          <div  className={classNames('left', { 'Topnav__mobile-hidden': searchBarActive })}>
             <Link className="Topnav__brand" to="/">
-              <i className="iconfont icon-busy Topnav__brand-icon" />
-              busy
+
+
+                <img src={logo} width="200px;"  alt="logo" />
+
             </Link>
-            <span className="Topnav__version">beta</span>
+
           </div>
           <div className={classNames('center', { mobileVisible: searchBarActive })}>
             <div className="Topnav__input-container">
